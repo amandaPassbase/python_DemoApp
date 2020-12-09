@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <!-- <link rel="stylesheet" href="./src//styles.css" /> -->
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/@passbase/button@v3/button.js"
+    ></script>
+  </head>
+
+  <body>
+    <img
+      class="img-fluid passbase"
+      src="https://passbase.com/assets/images/logo.png"
+      alt="Passbase"
+    />
+    <div class="container">
+      <p class="title">Please open the demo in a new window</p>
+      <p class="subtitle">
+        Click the button below to start a new verification.
+      </p>
+      <div id="passbase-button"></div>
+    </div>
+  </body>
+  <!-- You can place the Passbase JS code below or in a separate JS file -->
+  <script type="text/javascript">
+    const element = document.getElementById("passbase-button");
+    const apiKey =
+      "HP6DL29wgsMwul2QMaI6jazmifVyY9Z4ryHxY9YkNyhvvQxDI5eEpYDNsO2DY0Rp";
+    Passbase.renderButton(element, apiKey, {
+      prefillAttributes: {
+        email: "user@email.de",
+        country: "de"
+      },
+      onFinish: (identityAccessKey) => {},
+      onError: (errorCode) => {},
+      onStart: () => {}
+    });
+  </script>
+</html>
