@@ -19,7 +19,7 @@ def passbaseWebhook(request):
     print(identityAccessKey)
 
     configuration = passbase.Configuration()
-    configuration.api_key['X-API-KEY'] = '81F467vM0y763t9RNR2QiolxqWXnQLurcnVOMzoNGAWRR5d8K5lHXuCSlpedoe701GAjELtSFduv1tO6E4sV5X6YMQtfEqCx6dnl6n9OEZZ6v7yK0t8fTBxfxbbJgbQH'
+    configuration.api_key['X-API-KEY'] = 'SECRET_API_KEY'
 
     api_instance = passbase.IdentityApi(passbase.ApiClient(configuration))
     id = identityAccessKey
